@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+        <script type="text/javascript" src='calci.js'></script>
+        <style>
+            /* td{
+                padding: 25px;
+                text-align: center;
+                color: white;
+                font-size: 25px;
+                border-collapse: collapse;
+            } */
+            button{
+                width: 100px;
+                height: 100px;
+                text-align: center;
+                color: white;
+                font-size: 25px;
+                background-color: gray;
+                border-collapse: collapse;
+            }
+            body{
+                background-color: rgb(214, 13, 13);
+            }
+
+
+
+        </style>
+
+        
+        <title>
+            Calculator
+        </title>
+    </head>
+    <body>
+        <p style="padding: 25px; color: white;" id = "output">
+            0
+            <br>
+            <br>
+        </p>
+        <table>
+            <tr>
+            <td><button id="7" name="7" value="7">7</button></td>
+            <td><button id="8" name="8" value="8">8</button></td>
+            <td><button id="9" name="9" value="9">9</button></td>
+            <td><button style="background-color: black;" id="/" name="/" value="/">/</button></td>
+            <td><button style="background-color: black;" id="C" name="C" value="C">C</button></td>
+            </tr>
+            <tr>
+            <td><button id="4" name="4" value="4">4</button></td>
+            <td><button id="5" name="5" value="5">5</button> </td>
+            <td><button id="6" name="6" value="6">6</button> </td>
+            <td><button style="background-color: black;" id="*" name="*" value="*">*</button> </td>
+            <td><button style="background-color: black;" id="del" name="del" value="del">DEL</button> </td>
+            </tr>
+
+            <tr>
+            <td><button id="1" name="1" value="1">1</button> </td>
+            <td><button id="2" name="2" value="2">2</button> </td>
+            <td><button id="3" name="3" value="3">3</button> </td>
+            <td><button style="background-color: black; " id="-" name="-" value="-">-</button> </td>
+            <td><button style="background-color: black; " ></button> </td>
+            </tr>
+
+            <tr>
+            <td><button id="." name="." value=".">.</button> </td>
+            <td><button id="0" name="0" value="0">0</button> </td>
+            <td><button id="." name="." value=".">  </button> </td>
+            <td><button style="background-color: black;" id="+" name="=" value="+">+</button> </td>
+            <td><button style="background-color: black;" id="+" name="=" value="=">=</button> </td>
+            </tr>
+
+
+        </table>
+    </body>
+</html>
