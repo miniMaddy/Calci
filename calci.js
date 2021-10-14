@@ -1,32 +1,26 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
 $(document).ready(function(){
-    var count = -1;
     var string = "";
-    var op = 0;
-    var ans = 0;
+    var ans = 0.0;
     $("button").click(function(){
-        if($(this).val() == '+' || '*' || '/' || '-'){
-            op = count + 1;
-            count = count + 1;
-            string = string.concat($(this).val());
-            document.getElementById("output").innerHTML = document.getElementById("output").append($(this).val());
+        if($(this).val() == 'C'){
+            document.getElementById("output").innerHTML = ''
+            string = '';
+        }
+        else if($(this).val() == 'del') {
+            document.getElementById("output").innerHTML = string.substr(0, (string.length)-1);
+            string = string.substr(0, (string.length)-1);
         }
         else if($(this).val() != '=')
         {
-            document.getElementById("output").innerHTML = document.getElementById("output").append($(this).val());
+            document.getElementById("output").append($(this).val());
             string = string.concat($(this).val());
-            count = count + 1;
         }
         // alert(value);
         // var a = parseInt(value, 10);
         else{
-            switch(string.substr(op,op+1)){
-                case '+': ans = parseInt(string.substr(0,op), 10) + parseInt(string.substr(op+1), 10);
-                case '*': ans = parseInt(string.substr(0,op), 10) * parseInt(string.substr(op+1), 10);
-                case '/': ans = parseInt(string.substr(0,op), 10) / parseInt(string.substr(op+1), 10);
-                case '-': ans = parseInt(string.substr(0,op), 10) - parseInt(string.substr(op+1), 10);
-            }
-            document.getElementById("output").innerHTML = ans;
+            ans = eval(string);
+            document.getElementById("output").innerHTML = ans.toString();
             string = ans.toString();
         }
 
